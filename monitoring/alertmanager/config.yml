@@ -1,0 +1,12 @@
+global:
+  # The smarthost and SMTP sender used for mail notifications.
+  smtp_smarthost: 'localhost:25'
+  smtp_from: 'alertmanager@ericsson.com'
+  smtp_require_tls: false
+route:
+    receiver: 'personal-email'
+
+receivers:
+- name: 'personal-email'
+  email_configs:
+  - to: 'sean.byrne@ericsson.com'
